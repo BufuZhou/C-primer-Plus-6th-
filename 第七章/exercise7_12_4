@@ -1,0 +1,30 @@
+/* exercise7_12_5.c */
+#include <stdio.h>
+
+int main(void)
+{
+	int nchange = 0;
+	char ch;
+	
+	while((ch=getchar())!='#')
+	{
+		
+		switch(ch)
+		{
+			case '.':
+				printf("!");
+				nchange++;
+				break;
+			case '!':
+				printf("!!");
+				nchange++;
+				break;
+			default:
+				putchar(ch);
+		}
+	}
+	
+	printf("\n%d substitutions were made.\n", nchange);
+	
+	return 0;
+}
